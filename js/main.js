@@ -1,5 +1,4 @@
-$(document).ready(function(){
-    
+$(document).ready(function(){    
     function moveicons() {
         var elem = $('.gif');
         var w = elem.width(); 
@@ -8,15 +7,14 @@ $(document).ready(function(){
         elem.mouseover(function(){  
             var i = 0;
             var step = 300;
-            setInterval(function() {
+            setTimeout (function() {
                 i++;
                 step = 300 * i;
-                elem.css('background-position-y', step + 12 + 'px');
-            }, 500);
+                elem.css('background-position','-10px'+step+12+'px');
+            }, 200);
         });
         elem.mouseout(function(){ 
-            clearInterval();
+            clearTimeout();
         });
-    };
-    
+    };    
 });
